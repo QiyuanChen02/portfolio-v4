@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+@theme {
+    --color-accent: var(--color-teal-300);
+    --color-background: var(--color-gray-900);
+    --color-text: var(--color-white);
+    --color-muted: var(--color-gray-300);
+}

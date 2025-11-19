@@ -1,0 +1,25 @@
+---
+import { socials } from '../helpers/socials.astro'
+---
+
+<aside
+	class="fixed bottom-0 hidden w-24 flex-col items-center space-y-4 px-8 md:flex"
+>
+	{
+		socials.map((social) => {
+			const Icon = social.icon
+			return (
+				<a
+					href={social.href}
+					target="_blank"
+					rel="noopener noreferrer"
+					aria-label={social.label}
+					class="group h-8 w-8 p-1"
+				>
+					<Icon class="text-muted group-hover:text-accent h-6 w-6 transition duration-300 group-hover:-translate-y-1" />
+				</a>
+			)
+		})
+	}
+	<div class="bg-muted mt-2 h-30 w-px"></div>
+</aside>

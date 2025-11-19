@@ -1,0 +1,17 @@
+---
+import Navbar from '../components/Navbar.astro'
+import Sidebar from '../components/Sidebar.astro'
+import Drawer from '../components/Drawer.astro'
+import Footer from '../components/Footer.astro'
+import PageWrapper from './PageWrapper.astro'
+---
+
+<PageWrapper>
+	<Navbar />
+	<Sidebar />
+	<Drawer />
+	<main class="flex flex-col px-10 py-20 md:px-30">
+		<slot />
+		<Footer />
+	</main>
+</PageWrapper>

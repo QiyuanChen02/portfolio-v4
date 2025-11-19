@@ -1,0 +1,32 @@
+---
+import { socials } from '../helpers/socials.astro'
+---
+
+<footer class="mt-12 px-8 py-8">
+	<div class="flex flex-col items-center space-y-4">
+		<!-- Social Links (Mobile only) -->
+		<div class="flex items-center space-x-4 md:hidden">
+			{
+				socials.map((social) => {
+					const Icon = social.icon
+					return (
+						<a
+							href={social.href}
+							target="_blank"
+							rel="noopener noreferrer"
+							aria-label={social.label}
+							class="group h-6 w-6"
+						>
+							<Icon class="text-muted group-hover:text-accent h-6 w-6 transition duration-300 group-hover:-translate-y-1" />
+						</a>
+					)
+				})
+			}
+		</div>
+
+		<!-- Footer Text -->
+		<p class="text-muted text-center text-sm">
+			Built with <span class="text-accent">Astro</span> by Qiyuan Chen
+		</p>
+	</div>
+</footer>

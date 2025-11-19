@@ -1,0 +1,97 @@
+---
+import { links } from '../helpers/links.astro'
+import Button from './Button.astro'
+---
+
+<!-- Backdrop -->
+<div
+	id="drawer-backdrop"
+	class="bg-background/60 pointer-events-none fixed inset-0 z-40 opacity-0 transition-opacity duration-300"
+>
+</div>
+
+<!-- Drawer -->
+<aside
+	id="drawer"
+	class="bg-background fixed top-0 right-0 z-50 h-full w-3/4 max-w-sm translate-x-full transform brightness-150 transition-transform duration-300 ease-in-out"
+>
+	<div class="flex h-full flex-col p-8">
+		<!-- Close Button -->
+		<button
+			id="close-drawer"
+			type="button"
+			class="text-accent mb-8 self-end"
+			aria-label="Close menu"
+		>
+			<svg
+				class="h-8 w-8 cursor-pointer"
+				fill="none"
+				stroke="currentColor"
+				viewBox="0 0 24 24"
+			>
+				<path
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					stroke-width="2"
+					d="M6 18L18 6M6 6l12 12"></path>
+			</svg>
+		</button>
+
+		<!-- Navigation Links -->
+		<nav>
+			<ul class="space-y-6">
+				{
+					links.map((link, i) => (
+						<li>
+							<a
+								href={link.href}
+								class="hover:text-accent text-muted block text-lg font-semibold transition-colors duration-200"
+							>
+								<span class="text-accent">{i + 1}. </span>
+								{link.label}
+							</a>
+						</li>
+					))
+				}
+			</ul>
+		</nav>
+
+		<!-- Resume Button -->
+		<div class="mt-8">
+			<Button text="Resume" />
+		</div>
+	</div>
+</aside>
+
+<script>
+	const drawer = document.getElementById('drawer')
+	const backdrop = document.getElementById('drawer-backdrop')
+	const closeButton = document.getElementById('close-drawer')
+	const menuButton = document.getElementById('menu-button')
+
+	function openDrawer() {
+		if (drawer && backdrop) {
+			drawer.classList.remove('translate-x-full')
+			backdrop.classList.remove('opacity-0', 'pointer-events-none')
+		}
+	}
+
+	function closeDrawer() {
+		if (drawer && backdrop) {
+			drawer.classList.add('translate-x-full')
+			backdrop.classList.add('opacity-0', 'pointer-events-none')
+		}
+	}
+
+	// Event listeners
+	menuButton?.addEventListener('click', openDrawer)
+	closeButton?.addEventListener('click', closeDrawer)
+	backdrop?.addEventListener('click', closeDrawer)
+
+	// Close on escape key
+	document.addEventListener('keydown', (e) => {
+		if (e.key === 'Escape') {
+			closeDrawer()
+		}
+	})
+</script>
