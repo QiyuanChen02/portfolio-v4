@@ -1,6 +1,6 @@
 ---
-import { links } from '../helpers/links.astro'
-import Button from './Button.astro'
+import { links } from "../helpers/links.astro"
+import Button from "./Button.astro"
 ---
 
 <!-- Backdrop -->
@@ -64,33 +64,33 @@ import Button from './Button.astro'
 </aside>
 
 <script>
-	const drawer = document.getElementById('drawer')
-	const backdrop = document.getElementById('drawer-backdrop')
-	const closeButton = document.getElementById('close-drawer')
-	const menuButton = document.getElementById('menu-button')
+	const drawer = document.getElementById("drawer")
+	const backdrop = document.getElementById("drawer-backdrop")
+	const closeButton = document.getElementById("close-drawer")
+	const menuButton = document.getElementById("menu-button")
 
 	function openDrawer() {
 		if (drawer && backdrop) {
-			drawer.classList.remove('translate-x-full')
-			backdrop.classList.remove('opacity-0', 'pointer-events-none')
+			drawer.classList.remove("translate-x-full")
+			backdrop.classList.remove("opacity-0", "pointer-events-none")
 		}
 	}
 
 	function closeDrawer() {
 		if (drawer && backdrop) {
-			drawer.classList.add('translate-x-full')
-			backdrop.classList.add('opacity-0', 'pointer-events-none')
+			drawer.classList.add("translate-x-full")
+			backdrop.classList.add("opacity-0", "pointer-events-none")
 		}
 	}
 
 	// Event listeners
-	menuButton?.addEventListener('click', openDrawer)
-	closeButton?.addEventListener('click', closeDrawer)
-	backdrop?.addEventListener('click', closeDrawer)
+	menuButton?.addEventListener("click", openDrawer)
+	closeButton?.addEventListener("click", closeDrawer)
+	backdrop?.addEventListener("click", closeDrawer)
 
 	// Close on escape key
-	document.addEventListener('keydown', (e) => {
-		if (e.key === 'Escape') {
+	document.addEventListener("keydown", (e) => {
+		if (e.key === "Escape") {
 			closeDrawer()
 		}
 	})
