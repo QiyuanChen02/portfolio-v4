@@ -1,0 +1,30 @@
+---
+import Button from "../components/Button.astro"
+import H1 from "../components/text/H1.astro"
+import H2 from "../components/text/H2.astro"
+import P from "../components/text/P.astro"
+---
+
+<section class="flex w-full flex-col">
+	<div class="max-w-4xl">
+		<p class="text-accent mb-4 text-base font-medium">Hi, my name is</p>
+
+		<H1 className="mb-4"> Qiyuan Chen </H1>
+
+		<H2 className="mb-8"> I build things for the web. </H2>
+
+		<P className="mb-12 max-w-2xl">
+			I'm a software engineer with a background in maths and computer
+			science. I enjoy building clean, reliable web products across the
+			stack, from robust backend systems to intuitive user interfaces.
+		</P>
+
+		<a
+			href="/Qiyuan-Chen-Resume.pdf"
+			target="_blank"
+			rel="noopener noreferrer"
+		>
+			<Button text="Check out my resume!" />
+		</a>
+	</div>
+</section>

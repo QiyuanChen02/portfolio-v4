@@ -4,14 +4,13 @@ interface Props {
 	onClick?: (event: MouseEvent) => void
 }
 
-const { text, onClick }: Props = Astro.props
+const { text }: Props = Astro.props
 ---
 
 <div class="group relative inline-block">
 	<button
 		type="button"
 		class="text-accent border-accent relative z-10 cursor-pointer rounded border bg-gray-900 px-4 py-2 transition-transform duration-200 group-hover:-translate-x-1 group-hover:-translate-y-1"
-		on-click={onClick}
 	>
 		{text}
 	</button>

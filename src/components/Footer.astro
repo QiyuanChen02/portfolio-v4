@@ -1,5 +1,6 @@
 ---
-import { socials } from '../helpers/socials.astro'
+import { socials } from "../helpers/socials.astro"
+import TextLink from "./TextLink.astro"
 ---
 
 <footer class="mt-12 px-8 py-8">
@@ -26,7 +27,8 @@ import { socials } from '../helpers/socials.astro'
 
 		<!-- Footer Text -->
 		<p class="text-muted text-center text-sm">
-			Built with <span class="text-accent">Astro</span> by Qiyuan Chen
+			Built with <TextLink href="https://astro.build/">Astro</TextLink> by
+			Qiyuan Chen
 		</p>
 	</div>
 </footer>

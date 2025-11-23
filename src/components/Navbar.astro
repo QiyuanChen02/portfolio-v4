@@ -1,8 +1,8 @@
 ---
-import Button from './Button.astro'
-import Logo from '../icons/Logo.astro'
-import Menu from '../icons/Menu.astro'
-import { links } from '../helpers/links.astro'
+import Button from "./Button.astro"
+import Logo from "../icons/Logo.astro"
+import Menu from "../icons/Menu.astro"
+import { links } from "../helpers/links.astro"
 ---
 
 <nav class="flex items-center justify-between px-8 py-6">
@@ -35,9 +35,12 @@ import { links } from '../helpers/links.astro'
 				))
 			}
 		</ul>
-		<Button
-			text="Resume"
-			onClick={() => console.log('Resume button clicked')}
-		/>
+		<a
+			href="/Qiyuan-Chen-Resume.pdf"
+			target="_blank"
+			rel="noopener noreferrer"
+		>
+			<Button text="Resume" />
+		</a>
 	</div>
 </nav>

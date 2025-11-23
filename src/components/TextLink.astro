@@ -1,0 +1,19 @@
+---
+interface Props {
+	href: string
+}
+const { href } = Astro.props
+---
+
+<a
+	href={href}
+	target="_blank"
+	rel="noopener noreferrer"
+	aria-label="Astro Website"
+	class="text-accent group relative inline-block"
+>
+	<slot />
+	<span
+		class="bg-accent absolute bottom-0 left-0 h-px w-full origin-left scale-x-0 transition-transform duration-200 ease-out group-hover:scale-x-100"
+		aria-hidden="true"></span>
+</a>
