@@ -3,6 +3,7 @@ import Button from "./Button.astro"
 import Logo from "../icons/Logo.astro"
 import Menu from "../icons/Menu.astro"
 import { links } from "../helpers/links.astro"
+import NewTabLink from "./NewTabLink.astro"
 ---
 
 <nav class="flex items-center justify-between px-8 py-6">
@@ -26,7 +27,7 @@ import { links } from "../helpers/links.astro"
 					<li>
 						<a
 							href={link.href}
-							class="hover:text-accent text-muted font-semibold transition-colors duration-200"
+							class="hover:text-accent text-subdued font-semibold transition-colors duration-200"
 						>
 							<span class="text-accent">{i + 1}. </span>
 							{link.label}
@@ -35,12 +36,8 @@ import { links } from "../helpers/links.astro"
 				))
 			}
 		</ul>
-		<a
-			href="/Qiyuan-Chen-Resume.pdf"
-			target="_blank"
-			rel="noopener noreferrer"
-		>
+		<NewTabLink href="/Qiyuan-Chen-Resume.pdf">
 			<Button text="Resume" />
-		</a>
+		</NewTabLink>
 	</div>
 </nav>

@@ -1,0 +1,62 @@
+---
+import H4 from "./text/H4.astro"
+import Github from "../icons/Github.astro"
+import NewTabLink from "./NewTabLink.astro"
+
+interface Props {
+	title: string
+	description: string
+	tags: string[]
+	github: string
+}
+
+const { title, description, tags, github } = Astro.props
+---
+
+<div
+	class="group bg-panel-background flex flex-col gap-4 rounded p-6 transition-transform duration-300 hover:-translate-y-2"
+>
+	{/* Header */}
+	<div class="flex items-start justify-between">
+		{/* File Icon */}
+		<svg
+			class="text-accent h-10 w-10"
+			fill="none"
+			stroke="currentColor"
+			viewBox="0 0 24 24"
+		>
+			<path
+				stroke-linecap="round"
+				stroke-linejoin="round"
+				stroke-width="2"
+				d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"
+			>
+			</path>
+		</svg>
+
+		{/* GitHub Link */}
+		<NewTabLink
+			href={github}
+			className="text-muted hover:text-accent transition-colors duration-200"
+			ariaLabel="View on GitHub"
+		>
+			<Github class="h-7 w-7" />
+		</NewTabLink>
+	</div>
+	{/* Title */}
+	<H4 className="group-hover:text-accent transition-colors duration-300">
+		{title}
+	</H4>
+	{/* Description */}
+	<p class="text-subdued flex-1 text-sm">
+		{description}
+	</p>
+	{/* Tags */}
+	<div class="flex flex-wrap gap-2">
+		{
+			tags.map((tag) => (
+				<span class="text-muted text-xs font-light">{tag}</span>
+			))
+		}
+	</div>
+</div>

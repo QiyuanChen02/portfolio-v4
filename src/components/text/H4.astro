@@ -1,0 +1,14 @@
+---
+interface Props {
+	className?: string
+	large?: boolean
+}
+
+const { className = "", large = false } = Astro.props
+---
+
+<h4
+	class={`text-text ${large ? "text-3xl" : "text-xl"} font-bold ${className}`}
+>
+	<slot />
+</h4>

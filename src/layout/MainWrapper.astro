@@ -10,7 +10,9 @@ import PageWrapper from "./PageWrapper.astro"
 	<Navbar />
 	<Sidebar />
 	<Drawer />
-	<main class="flex flex-col items-center px-10 pt-20 md:px-30 lg:px-40">
+	<main
+		class="flex flex-col items-center gap-20 px-10 pt-20 md:px-30 lg:px-40"
+	>
 		<slot />
 		<Footer />
 	</main>

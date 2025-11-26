@@ -1,0 +1,68 @@
+---
+import H3 from "../components/text/H3.astro"
+import OtherProjectsCard from "../components/OtherProjectsCard.astro"
+
+const projects = [
+	{
+		title: "CRISPR ML Analysis",
+		description:
+			"Deep learning models using hurdle frameworks for CRISPR-Cas9 cleavage rate prediction. Master's thesis achieving Distinction (75/100).",
+		tags: ["Python", "TensorFlow", "Machine-Learning"],
+		github: "https://github.com/QiyuanChen02/OxfordMastersProject",
+	},
+	{
+		title: "MultiKick",
+		description:
+			"Watch multiple Kick.com streamers simultaneously with optimized grid layout, integrated chat, and shareable URLs.",
+		tags: ["Next.js", "Tailwind", "T3-Stack"],
+		github: "https://github.com/QiyuanChen02/multikick",
+	},
+	{
+		title: "Webview RPC",
+		description:
+			"Type-safe message layer between VS Code extensions and React webviews with React Query integration and Zod validation.",
+		tags: ["TypeScript", "Zod", "Node.js"],
+		github: "https://github.com/QiyuanChen02/webview-RPC",
+	},
+	{
+		title: "Create React Webview",
+		description:
+			"A command-line tool that generates boilerplate for VSCode extensions using React webviews, with a live-reload dev server.",
+		tags: ["VSCode-API", "Vite", "React"],
+		github: "https://github.com/QiyuanChen02/create-react-webview",
+	},
+	{
+		title: "Leicester Chinese School",
+		description:
+			"Bilingual (English/Chinese) website for Leicester Chinese Sunday School with learning resources and class information.",
+		tags: ["Astro", "i18n", "Tailwind"],
+		github: "https://github.com/QiyuanChen02/leicesterchineseschool",
+	},
+	{
+		title: "Portfolio v4",
+		description:
+			"This portfolio website built with Astro and Preact, featuring smooth animations, responsive design, and Tailwind v4.",
+		tags: ["Astro", "Preact", "Tailwind"],
+		github: "https://github.com/QiyuanChen02/portfolio-v4",
+	},
+]
+---
+
+<section class="w-full py-20 xl:w-5/6">
+	<H3 number={4} className="mb-12">Other Noteworthy Projects</H3>
+
+	<div
+		class="grid cursor-pointer grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3"
+	>
+		{
+			projects.map((project) => (
+				<OtherProjectsCard
+					title={project.title}
+					description={project.description}
+					tags={project.tags}
+					github={project.github}
+				/>
+			))
+		}
+	</div>
+</section>

@@ -3,11 +3,12 @@ import Button from "../components/Button.astro"
 import H1 from "../components/text/H1.astro"
 import H2 from "../components/text/H2.astro"
 import P from "../components/text/P.astro"
+import NewTabLink from "../components/NewTabLink.astro"
 ---
 
-<section class="flex w-full flex-col">
+<section class="flex min-h-[calc(100vh-200px)] w-full flex-col py-20 xl:w-4/5">
 	<div class="max-w-4xl">
-		<p class="text-accent mb-4 text-base font-medium">Hi, my name is</p>
+		<P accent className="mb-4 text-base font-medium">Hi, my name is</P>
 
 		<H1 className="mb-4"> Qiyuan Chen </H1>
 
@@ -19,12 +20,8 @@ import P from "../components/text/P.astro"
 			stack, from robust backend systems to intuitive user interfaces.
 		</P>
 
-		<a
-			href="/Qiyuan-Chen-Resume.pdf"
-			target="_blank"
-			rel="noopener noreferrer"
-		>
+		<NewTabLink href="/Qiyuan-Chen-Resume.pdf">
 			<Button text="Check out my resume!" />
-		</a>
+		</NewTabLink>
 	</div>
 </section>

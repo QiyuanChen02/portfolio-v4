@@ -1,5 +1,6 @@
 ---
-import { socials } from '../helpers/socials.astro'
+import { socials } from "../helpers/socials.astro"
+import NewTabLink from "./NewTabLink.astro"
 ---
 
 <aside
@@ -9,15 +10,13 @@ import { socials } from '../helpers/socials.astro'
 		socials.map((social) => {
 			const Icon = social.icon
 			return (
-				<a
+				<NewTabLink
 					href={social.href}
-					target="_blank"
-					rel="noopener noreferrer"
-					aria-label={social.label}
-					class="group h-8 w-8 p-1"
+					ariaLabel={social.label}
+					className="group h-8 w-8 p-1"
 				>
 					<Icon class="text-muted group-hover:text-accent h-6 w-6 transition duration-300 group-hover:-translate-y-1" />
-				</a>
+				</NewTabLink>
 			)
 		})
 	}

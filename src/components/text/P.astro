@@ -1,11 +1,15 @@
 ---
 interface Props {
 	className?: string
+	accent?: boolean
+	small?: boolean
 }
 
-const { className = "" } = Astro.props
+const { className = "", accent = false, small = false } = Astro.props
 ---
 
-<p class={`text-muted text-md md:text-lg ${className}`}>
+<p
+	class={`${accent ? "text-accent" : "text-muted"} ${small ? "text-md xl:text-lg" : "text-md md:text-lg"} ${className}`}
+>
 	<slot />
 </p>

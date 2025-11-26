@@ -20,7 +20,7 @@ export default function ExperienceTabs({ experiences }: ExperienceTabsProps) {
 	return (
 		<div class="flex flex-col md:flex-row gap-8">
 			{/* Tabs */}
-			<div class="flex flex-row md:flex-col relative overflow-x-auto md:overflow-x-visible">
+			<div class="flex flex-row md:flex-col relative overflow-x-auto md:overflow-x-visible scrollbar-thin">
 				
 				{/* Animated border indicator */}
 				<div
@@ -42,7 +42,7 @@ export default function ExperienceTabs({ experiences }: ExperienceTabsProps) {
 						onClick={() => setActiveTab(exp.company)}
 						class={`w-32 shrink-0 text-center md:w-auto px-4 py-3 md:text-left transition-all duration-300 hover:bg-accent/10 hover:cursor-pointer hover:text-accent border-b-2 md:border-l-2 md:border-b-0 border-muted ${
 							activeTab === exp.company
-								? "text-accent"
+								? "text-accent bg-accent/10"
 								: "text-muted"
 						}`}
 					>

@@ -1,0 +1,53 @@
+---
+import H3 from "../components/text/H3.astro"
+import MainProjectCardMobile from "../components/MainProjectCardMobile.astro"
+import MainProjectCardDesktop from "../components/MainProjectCardDesktop.astro"
+import prayerbudImage from "../assets/prayerbud.avif"
+import sydentifyImage from "../assets/sydentify.avif"
+import todosTrackerImage from "../assets/todos-tracker.avif"
+
+const projects = [
+	{
+		title: "Prayerbud",
+		description:
+			"A social platform for prayer communities that connects people through shared faith. Built while working at DTIServices, featuring prayer request posting, community support, prayer tracking, and real-time notifications to foster meaningful spiritual connections.",
+		tags: ["Next.js", "TypeScript", "tRPC", "shadcn", "Prisma"],
+		github: null,
+		website: "https://prayerbud.co.uk/",
+		image: prayerbudImage,
+	},
+	{
+		title: "Sydentify",
+		description:
+			"A Python-based tool for analyzing synaptic connections in neuroscience imaging data. Processes pre-synaptic and post-synaptic neuron data from CellProfiler to identify, validate, and visualize synapses with density mapping capabilities.",
+		tags: ["Python", "Matplotlib", "NumPy", "Pandas", "Pillow"],
+		github: "https://github.com/QiyuanChen02/Sydentify",
+		website: null,
+		image: sydentifyImage,
+	},
+	{
+		title: "Todos Tracker",
+		description:
+			"A modern VSCode extension featuring a Kanban board and calendar for managing coding tasks. Includes drag-and-drop task management, priority tagging, deadline tracking, and workspace-based storage for seamless project integration.",
+		tags: ["React", "TypeScript", "Vite", "Tailwind", "VSCode-API"],
+		github: "https://github.com/QiyuanChen02/todos-tracker",
+		website: "https://vscode-todos-tracker.netlify.app/",
+		image: todosTrackerImage,
+	},
+]
+---
+
+<section id="work" class="w-full py-20 xl:w-5/6">
+	<H3 number={3} className="mb-24">Some Things I've Built</H3>
+
+	<div class="flex flex-col gap-32">
+		{
+			projects.map((project, index) => (
+				<Fragment>
+					<MainProjectCardMobile {...project} />
+					<MainProjectCardDesktop {...project} index={index} />
+				</Fragment>
+			))
+		}
+	</div>
+</section>

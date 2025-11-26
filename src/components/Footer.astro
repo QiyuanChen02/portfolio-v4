@@ -1,6 +1,7 @@
 ---
 import { socials } from "../helpers/socials.astro"
 import TextLink from "./TextLink.astro"
+import NewTabLink from "./NewTabLink.astro"
 ---
 
 <footer class="mt-12 px-8 py-8">
@@ -11,15 +12,13 @@ import TextLink from "./TextLink.astro"
 				socials.map((social) => {
 					const Icon = social.icon
 					return (
-						<a
+						<NewTabLink
 							href={social.href}
-							target="_blank"
-							rel="noopener noreferrer"
-							aria-label={social.label}
-							class="group h-6 w-6"
+							ariaLabel={social.label}
+							className="group h-6 w-6"
 						>
 							<Icon class="text-muted group-hover:text-accent h-6 w-6 transition duration-300 group-hover:-translate-y-1" />
-						</a>
+						</NewTabLink>
 					)
 				})
 			}
@@ -27,8 +26,7 @@ import TextLink from "./TextLink.astro"
 
 		<!-- Footer Text -->
 		<p class="text-muted text-center text-sm">
-			Built with <TextLink href="https://astro.build/">Astro</TextLink> by
-			Qiyuan Chen
+			Built with Astro by Qiyuan Chen
 		</p>
 	</div>
 </footer>
