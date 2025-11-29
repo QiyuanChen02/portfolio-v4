@@ -7,7 +7,7 @@ import NewTabLink from "./NewTabLink.astro"
 <footer class="mt-12 px-8 py-8">
 	<div class="flex flex-col items-center space-y-4">
 		<!-- Social Links (Mobile only) -->
-		<div class="flex items-center space-x-4 md:hidden">
+		<div class="flex items-center space-x-4 lg:hidden">
 			{
 				socials.map((social) => {
 					const Icon = social.icon
@@ -15,9 +15,9 @@ import NewTabLink from "./NewTabLink.astro"
 						<NewTabLink
 							href={social.href}
 							ariaLabel={social.label}
-							className="group h-6 w-6"
+							className="group h-10 w-10"
 						>
-							<Icon class="text-muted group-hover:text-accent h-6 w-6 transition duration-300 group-hover:-translate-y-1" />
+							<Icon class="text-muted group-hover:text-accent h-8 w-8 transition duration-300 group-hover:-translate-y-1" />
 						</NewTabLink>
 					)
 				})
@@ -25,8 +25,8 @@ import NewTabLink from "./NewTabLink.astro"
 		</div>
 
 		<!-- Footer Text -->
-		<p class="text-muted text-center text-sm">
-			Built with Astro by Qiyuan Chen
+		<p class="text-subdued text-center text-sm">
+			Built with Astro and Three.js by Qiyuan Chen
 		</p>
 	</div>
 </footer>

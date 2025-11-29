@@ -8,10 +8,9 @@ const experiences = [
 		role: "Software Engineer",
 		period: "Summer 2024",
 		description: [
-			"Worked with a team in React, TypeScript, and Node.js in an agile environment to develop internal tooling for electric vehicle manufacturing",
-			"Took ownership of the Manufacturing BOM and Build Planner modules, promptly responding to stakeholder requests and issues",
-			"Translated stakeholder requirements into concrete technical changes and improvements",
-			"Participated in code reviews and followed Git-based version control workflows",
+			"Developed internal tooling for vehicle manufacturing using React, TypeScript, and Node.js in an agile environment",
+			"Owned the Manufacturing BOM and Build Planner modules, responding to stakeholder requests and issues",
+			"Translated requirements into technical changes, participated code reviews and followed Git workflows",
 		],
 	},
 	{
@@ -38,7 +37,10 @@ const experiences = [
 ]
 ---
 
-<section id="experience" class="w-full py-20 xl:w-5/6">
+<section
+	id="experience"
+	class="bg-background/85 w-full rounded-2xl px-12 py-12 lg:px-16 lg:py-20 xl:w-5/6"
+>
 	<H3 number={2} className="mb-12">Where I've Worked</H3>
 
 	<ExperienceTabs experiences={experiences} client:load />

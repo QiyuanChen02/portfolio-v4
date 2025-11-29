@@ -13,14 +13,14 @@ import NewTabLink from "./NewTabLink.astro"
 	<button
 		id="menu-button"
 		type="button"
-		class="text-accent h-8 w-8 cursor-pointer transition-transform duration-200 hover:scale-110 md:hidden"
+		class="text-accent h-8 w-8 cursor-pointer transition-transform duration-200 hover:scale-110 lg:hidden"
 		aria-label="Toggle menu"
 	>
 		<Menu />
 	</button>
 
 	<!-- Navigation Links & Resume Button (Desktop only) -->
-	<div class="hidden items-center space-x-6 md:flex">
+	<div class="hidden items-center space-x-6 lg:flex">
 		<ul class="flex space-x-6">
 			{
 				links.map((link, i) => (

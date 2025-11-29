@@ -6,18 +6,22 @@ import P from "../components/text/P.astro"
 import NewTabLink from "../components/NewTabLink.astro"
 ---
 
-<section class="flex min-h-[calc(100vh-200px)] w-full flex-col py-20 xl:w-4/5">
+<section
+	class="flex min-h-[calc(100vh-200px)] w-full flex-col pt-10 pb-20 xl:w-4/5"
+>
 	<div class="max-w-4xl">
 		<P accent className="mb-4 text-base font-medium">Hi, my name is</P>
 
 		<H1 className="mb-4"> Qiyuan Chen </H1>
 
-		<H2 className="mb-8"> I build things for the web. </H2>
+		<H2 className="mb-8 max-w-3xl">
+			I engineer solutions for the digital world.
+		</H2>
 
-		<P className="mb-12 max-w-2xl">
-			I'm a software engineer with a background in maths and computer
-			science. I enjoy building clean, reliable web products across the
-			stack, from robust backend systems to intuitive user interfaces.
+		<P className="mb-12 max-w-3xl">
+			I'm a software engineer with a background in mathematics and
+			computer science. I enjoy building robust, maintainable software
+			across the stack, from open source libraries to full-stack web apps.
 		</P>
 
 		<NewTabLink href="/Qiyuan-Chen-Resume.pdf">

@@ -9,7 +9,7 @@ const { className = "", accent = false, small = false } = Astro.props
 ---
 
 <p
-	class={`${accent ? "text-accent" : "text-muted"} ${small ? "text-md xl:text-lg" : "text-md md:text-lg"} ${className}`}
+	class={`${accent ? "text-accent" : "text-subdued"} ${small ? "text-md xl:text-lg" : "text-md lg:text-lg"} ${className}`}
 >
 	<slot />
 </p>

@@ -18,19 +18,19 @@ export default function ExperienceTabs({ experiences }: ExperienceTabsProps) {
 	const activeIndex = experiences.findIndex((exp) => exp.company === activeTab);
 
 	return (
-		<div class="flex flex-col md:flex-row gap-8">
+		<div class="flex flex-col lg:flex-row gap-8">
 			{/* Tabs */}
-			<div class="flex flex-row md:flex-col relative overflow-x-auto md:overflow-x-visible scrollbar-thin">
+			<div class="flex flex-row lg:flex-col relative overflow-x-auto lg:overflow-x-visible scrollbar-thin">
 				
 				{/* Animated border indicator */}
 				<div
-					class="absolute left-0 w-0.5 h-12 bg-accent transition-all duration-300 ease-out hidden md:block"
+					class="absolute left-0 w-0.5 h-12 bg-accent transition-all duration-300 ease-out hidden lg:block"
 					style={{
 						transform: `translateY(${activeIndex * 48}px)`
 					}}
 				/>
 				<div
-					class="absolute bottom-0 left-0 h-0.5 w-32 bg-accent transition-all duration-300 ease-out md:hidden"
+					class="absolute bottom-0 left-0 h-0.5 w-32 bg-accent transition-all duration-300 ease-out lg:hidden"
 					style={{
 						transform: `translateX(${activeIndex * 128}px)`
 					}}
@@ -40,7 +40,7 @@ export default function ExperienceTabs({ experiences }: ExperienceTabsProps) {
 					<button
 						key={exp.company}
 						onClick={() => setActiveTab(exp.company)}
-						class={`w-32 shrink-0 text-center md:w-auto px-4 py-3 md:text-left transition-all duration-300 hover:bg-accent/10 hover:cursor-pointer hover:text-accent border-b-2 md:border-l-2 md:border-b-0 border-muted ${
+						class={`w-32 shrink-0 text-center lg:w-auto px-4 py-3 lg:text-left transition-all duration-300 hover:bg-accent/10 hover:cursor-pointer hover:text-accent border-b-2 lg:border-l-2 lg:border-b-0 border-muted ${
 							activeTab === exp.company
 								? "text-accent bg-accent/10"
 								: "text-muted"

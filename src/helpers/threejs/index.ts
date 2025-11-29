@@ -1,0 +1,5 @@
+export { addCubes } from "./addCubes"
+export { addSpheres } from "./addSpheres"
+export { animateCubes } from "./animateCubes"
+export { animateSpheres } from "./animateSpheres"
+export { initScene } from "./initScene"
