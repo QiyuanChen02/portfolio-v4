@@ -14,7 +14,7 @@ const { src, alt, className = "" } = Astro.props
 	class={`group relative transition-transform duration-300 hover:-translate-2 ${className}`}
 >
 	<div
-		class="border-accent absolute inset-0 -z-10 translate-3 rounded-lg border-2 transition-transform duration-300 group-hover:translate-6"
+		class="border-accent absolute inset-0 -z-10 hidden translate-3 rounded-lg border-2 transition-transform duration-300 group-hover:translate-6 lg:block"
 	>
 	</div>
 	<Image src={src} alt={alt} class="rounded-lg" loading="lazy" />
